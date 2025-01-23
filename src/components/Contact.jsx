@@ -65,7 +65,7 @@ const Contact = () => {
                 className="inline-block text-pink-400 mr-2"
                 size={20}
               />
-              <a href="shravanikadage@gmail.com" className="hover:underline">
+              <a href="mailto:shravanikadage@gmail.com" className="hover:underline">
                 shravanikadage@email.com
               </a>
             </div>

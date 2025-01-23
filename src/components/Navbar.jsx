@@ -4,13 +4,16 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full bg-black text-white px-6 md:px-16 lg:px-24 z-50">
+      <nav className="fixed top-0 left-0 w-full bg-black text-white px-8 md:px-16 lg:px-24 z-50">
         <div className="container py-2 flex justify-between items-center">
+          {/* Logo */}
           <div className="text-2xl font-bold">Shravani</div>
 
           {/* Desktop Links */}
@@ -32,18 +35,28 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Hamburger Menu */}
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-2xl focus:outline-none"
+            className="md:hidden focus:outline-none text-xl"
           >
             {menuOpen ? "✖" : "☰"}
           </button>
+
+          {/* Mobile Connect Me Button */}
+          <div className="hidden md:block">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
+            >
+              Connect Me
+            </a>
+          </div>
         </div>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Links */}
         {menuOpen && (
-          <div className="md:hidden flex flex-col items-center space-y-4 mt-2 bg-black text-white p-4 border-t border-gray-700">
+          <div className="md:hidden flex flex-col space-y-4 mt-2 bg-black text-white p-4">
             <a href="#home" className="hover:text-gray-400" onClick={toggleMenu}>
               Home
             </a>
@@ -74,6 +87,13 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Contact
+            </a>
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full text-center"
+              onClick={toggleMenu}
+            >
+              Connect Me
             </a>
           </div>
         )}

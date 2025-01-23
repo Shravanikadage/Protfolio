@@ -118,7 +118,7 @@ const Resume = () => {
                 <FaLaptopCode className="text-4xl text-gradient-to-r from-green-400 to-blue-500" />
               </div>
               <div className="text-left w-full bg-gray-800 p-6 rounded-lg shadow-md hover:bg-gray-700">
-                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-600">
+                <h3 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-400">
                   {exp.title}
                 </h3>
                 <p className="text-gray-300">{exp.duration}</p>

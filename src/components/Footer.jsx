@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           <div className="flex-1 w-full">
             <form className="flex items-center justify-center" onSubmit={onSubmit}>
-              <input type="email" name="email" placeholder="Your email" className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 focus:outline-none focus:border-pink-400" />
+              <input type="email" name="email" placeholder="Your email" required className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 focus:outline-none focus:border-pink-400" />
               <button type="submit" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-r-lg" > Subscribe </button>
             </form>
           </div>
